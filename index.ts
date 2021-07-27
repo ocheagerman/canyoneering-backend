@@ -5,6 +5,7 @@ import cluster from 'cluster';
 import os from 'os';
 import helmet from 'helmet';
 import ip from 'public-ip'
+import cookieParser from 'cookie-parser';
 import { routes } from './modules'
 
 dontenv.config();
@@ -30,7 +31,8 @@ if (cluster.isMaster) {
   })
   server.headersTimeout = 7200000;
   server.keepAliveTimeout = 60000;
-  app.disable('x-powered-by');
   app.use(helmet())
+  app.use(cookieParser());
+  app.use(express.json());
   routes(app);
 }
