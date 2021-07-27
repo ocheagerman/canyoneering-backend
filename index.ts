@@ -5,6 +5,7 @@ import cluster from 'cluster';
 import os from 'os';
 import helmet from 'helmet';
 import ip from 'public-ip'
+import { routes } from './modules'
 
 dontenv.config();
 const app = express();
@@ -27,10 +28,9 @@ if (cluster.isMaster) {
     log(`Local Machine: http://localhost:${PORT}`);
     log(`Internet: http://${await internet}:${PORT}`)
   })
-
   server.headersTimeout = 7200000;
   server.keepAliveTimeout = 60000;
-
   app.disable('x-powered-by');
   app.use(helmet())
+  routes(app);
 }
