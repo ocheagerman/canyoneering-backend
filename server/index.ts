@@ -1,3 +1,4 @@
+#!/usr/bin/node
 import dontenv from 'dotenv';
 import express from 'express';
 import debug from 'debug';
