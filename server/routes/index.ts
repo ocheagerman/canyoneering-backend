@@ -1,7 +1,8 @@
 import { Routes } from './types';
-import upload from './upload';
+// import your route files here
+
 const ROUTES: Routes = {
-  upload: upload,
+  // re-export your route files here
 };
 
 export default ROUTES;
