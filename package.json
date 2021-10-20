@@ -1,17 +1,17 @@
 {
-  "name": "typescript_server",
+  "name": "express-typescript",
   "version": "1.0.0",
-  "description": "express server template and boiler plate",
+  "description": "Express TypeScript Template",
   "main": "dist",
+  "keywords": ["express", "typescript", "template", "express-typescript", "express-boilerplate"],
+  "author": "German Ochea",
+  "license": "MIT",
   "scripts": {
     "test": "jest",
     "build": "tsc",
     "start": "node dist",
-    "dev": "nodemon --exec ts-node index.ts"
+    "dev": "nodemon --exec ts-node ./server/index.ts"
   },
-  "keywords": [],
-  "author": "German Ochea",
-  "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.1",
     "cookie-parser": "^1.4.5",

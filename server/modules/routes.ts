@@ -1,4 +1,4 @@
-import express, { Express } from 'express'
+import express, { Express } from 'express';
 import path from 'path';
 import ROUTES from '../routes';
 
@@ -12,4 +12,3 @@ export default function routes(app: Express) {
   }
   app.use(express.static(path.resolve('public')));
 }
-
