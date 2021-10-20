@@ -3,15 +3,7 @@
   "version": "1.0.0",
   "description": "Express TypeScript Template",
   "main": "server",
-  "bin": "./bin/cli.js",
   "keywords": ["express", "typescript", "template", "express-typescript", "express-boilerplate"],
-  "author": "duterte",
-  "license": "MIT",
-  "homepage": "https://github.com/duterte/create-express-typescript.git",
-  "repository": {
-    "url": "git+https://github.com/duterte/create-express-typescript.git",
-    "type": "git"
-  },
   "scripts": {
     "test": "jest",
     "build": "tsc",
