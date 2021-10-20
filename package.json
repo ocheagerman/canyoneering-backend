@@ -5,7 +5,7 @@
   "main": "server",
   "bin": "./bin/cli.js",
   "keywords": ["express", "typescript", "template", "express-typescript", "express-boilerplate"],
-  "author": "German Ochea",
+  "author": "duterte",
   "license": "MIT",
   "homepage": "https://github.com/duterte/create-express-typescript.git",
   "repository": {
