@@ -12,30 +12,30 @@
 ```js
 // upload.ts
 
-import express from 'express';
-import { Route } from './types';
+import express from "express";
+import { Route } from "./types";
 
 const router = express.Router();
-const url = '/upload';
+const url = "/upload";
 
-router.post('/', (req, res) => {
-  return res.status(200).json('ok');
+router.post("/", (req, res) => {
+  return res.status(200).json("ok");
 });
 
-const upload: Route = {
+const route: Route = {
   url: url,
   route: router,
 };
 
-export default upload;
+export default route;
 ```
 
 1. import the exported object from the route file to the `index.ts` in this the same directory
 1. Add it as one of the property of the constant variable name `ROUTES`
 
 ```js
-import { Routes } from './types';
-import upload from './upload';
+import { Routes } from "./types";
+import upload from "./upload";
 
 const ROUTES: Routes = {
   upload: upload,

@@ -1,6 +1,9 @@
-import express, { Express } from 'express';
-import path from 'path';
-import ROUTES from '../routes';
+import express, { Express } from "express";
+import path from "path";
+import ROUTES from "../routes";
+import { debug } from "debug";
+
+const log = debug("http:server");
 
 // this module is supposed to be close for modification
 // please dont modify, route modules is totally reliant on this module
@@ -10,5 +13,5 @@ export default function routes(app: Express) {
   for (const key in ROUTES) {
     app.use(ROUTES[key].url, ROUTES[key].route);
   }
-  app.use(express.static(path.resolve('public')));
+  app.use(express.static(path.resolve("public/browser")));
 }
