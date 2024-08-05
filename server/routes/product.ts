@@ -19,6 +19,8 @@ interface Products {
   [key: string]: {
     pickup: PackageOption[];
     addons: PackageOption[];
+    videos: string[];
+    images: string[];
   };
 }
 
@@ -91,6 +93,8 @@ const products: Products = {
         price: 0,
       },
     ],
+    videos: [],
+    images: [],
   },
 };
 
